@@ -44,9 +44,12 @@ Record the commands you run and what each failure means.
 
 - Data-tier command: `npm run test:data --prefix octofit-tracker/backend`
     1- 1 passed, 4 failed
+    2- 2 passed, 3 failed
+    3- 5 passed
   - The failures indicate missing model validation for required user, team, activity, and workout fields; the seed/idempotency test passed.
 - API command: `npm run test:api --prefix octofit-tracker/backend`
     1- 4 failed
+    2- (after createActivity) 3 failed, 1 passed
   - Failures indicate invalid activity and team requests are not returning the expected 4xx responses, the leaderboard is not aggregating activity points, and workout suggestions lack the expected reason.
 - Frontend command: `npm test --prefix octofit-tracker/frontend`
     1- 15 failed
